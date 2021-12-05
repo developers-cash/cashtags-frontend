@@ -66,6 +66,7 @@ const CashTagsMixin = {
     validCashAddr (val) {
       try {
         cashaddr.decode(val)
+        // val.split('-').forEach(address => cashaddr.decode(address))
         return true
       } catch (err) {
         return 'Invalid Cash Address'
